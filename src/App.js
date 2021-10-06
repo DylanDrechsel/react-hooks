@@ -3,11 +3,10 @@ import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useUpdateLogger from './hooks/useUpdateLogger';
 import MemoComponent from './hooks/useMemo';
-import refComponent from './hooks/useRef';
+import RefComponent from './hooks/useRef';
 
 function App() {
   const [name, setName] = useLocalStorage('name', '')
-
   useUpdateLogger(name)
 
   return (
@@ -17,7 +16,7 @@ function App() {
         {/* <MemoComponent /> */}
 
       {/* useRef */}
-        <refComponent />
+        <RefComponent />
 
 
       {/* CODE FOR useLocalStorage */}
