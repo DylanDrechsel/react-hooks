@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 const useMemoComponent = () => {
     const [number, setNumber] = useState(0)
     const [dark, setDark] = useState(false)
-    const doubleNumber = slowFunction(number)
+    const doubleNumber = useMemo(() =>  {
+        return slowFunction(number)
+    }, [number])
 
     return (
         <div className='useMemoDiv' /* style={{ backgroundColor: 'blue', width: 'auto', height: '10vh' }} */>
