@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useUpdateLogger from './hooks/useUpdateLogger';
+import MemoComponent from './hooks/useMemo';
 
 function App() {
   const [name, setName] = useLocalStorage('name', '')
@@ -10,10 +11,15 @@ function App() {
 
   return (
     <div className="App">
-      <input
+      <MemoComponent />
+
+      {/* CODE FOR useLocalStorage */}
+      {/* <input
         type="text"
         value={name}
-        onChange={e => setName(e.target.value)} />
+        onChange={e => setName(e.target.value)} /> */}
+
+        
     </div>
   );
 }
