@@ -3,6 +3,7 @@ import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useUpdateLogger from './hooks/useUpdateLogger';
 import MemoComponent from './hooks/useMemo';
+import refComponent from './hooks/useRef';
 
 function App() {
   const [name, setName] = useLocalStorage('name', '')
@@ -11,7 +12,13 @@ function App() {
 
   return (
     <div className="App">
-      <MemoComponent />
+
+      {/* useMeno */}
+        {/* <MemoComponent /> */}
+
+      {/* useRef */}
+        <refComponent />
+
 
       {/* CODE FOR useLocalStorage */}
       {/* <input
