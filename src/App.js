@@ -3,6 +3,7 @@ import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useUpdateLogger from './hooks/useUpdateLogger';
 import ToggleComponent from './hooks/useToggle/ToggleComponent';
+import TimeoutComponent from './hooks/useTimeout/TimeoutComponent';
 import MemoComponent from './hooks/useMemo';
 import RefComponent from './hooks/useRef';
 import UseScript from './hooks/UseScript';
@@ -33,6 +34,9 @@ function App() {
 
       {/* useToggle */}
         {/* <ToggleComponent /> */}
+
+      {/* useTimeout */}
+        <TimeoutComponent />
     </div>
   );
 }
