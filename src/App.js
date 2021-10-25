@@ -2,8 +2,14 @@ import React from 'react'
 import './App.css';
 import useLocalStorage from './hooks/useLocalStorage';
 import useUpdateLogger from './hooks/useUpdateLogger';
+import ToggleComponent from './hooks/useToggle/ToggleComponent';
 import MemoComponent from './hooks/useMemo';
 import RefComponent from './hooks/useRef';
+import UseScript from './hooks/UseScript';
+import UseDeepCompareEffect from './hooks/UseDeepCompareEffect';
+import UseEventListener from './hooks/UseEventListener';
+import UseOnScreen from './hooks/UseOnScreen';
+import UseWindowSize from './hooks/UseWindowSize';
 
 function App() {
   const [name, setName] = useLocalStorage('name', '')
@@ -16,7 +22,7 @@ function App() {
         {/* <MemoComponent /> */}
 
       {/* useRef */}
-        <RefComponent />
+        {/* <RefComponent /> */}
 
 
       {/* CODE FOR useLocalStorage */}
@@ -25,7 +31,8 @@ function App() {
         value={name}
         onChange={e => setName(e.target.value)} /> */}
 
-        
+      {/* useToggle */}
+        {/* <ToggleComponent /> */}
     </div>
   );
 }
